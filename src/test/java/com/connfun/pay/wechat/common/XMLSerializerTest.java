@@ -3,6 +3,7 @@ package com.connfun.pay.wechat.common;
 import junit.framework.TestCase;
 
 import com.connfun.pay.wechat.entity.BaseEntity;
+import com.connfun.pay.wechat.entity.UnifiedOrderResponseEntity;
 
 public class XMLSerializerTest extends TestCase {
 
@@ -41,9 +42,32 @@ public class XMLSerializerTest extends TestCase {
         entity.setSignType(null);
 
         String xmlContent = XMLSerializer.serialize(entity);
+        System.out.println(xmlContent);
+    }
 
-        TestCase.assertEquals("<xml><body>test</body><device_info>1000</device_info><nonce_str>ibuaiVcKdpRxkhJA</nonce_str><appid>wxd930ea5d5a258f4f</appid><mch_id>10000100</mch_id></xml>",
-                xmlContent);
+    public void testDeserialize() {
+        String msg = "<xml>"
+                + "<return_code><![CDATA[SUCCESS]]></return_code>"
+                + "<return_msg><![CDATA[OK]]></return_msg>"
+                + "<appid><![CDATA[wx2421b1c4370ec43b]]></appid>"
+                + "<mch_id><![CDATA[10000100]]></mch_id>"
+                + "<device_info><![CDATA[1000]]></device_info>"
+                + "<nonce_str><![CDATA[TN55wO9Pba5yENl8]]></nonce_str>"
+                + "<sign><![CDATA[BDF0099C15FF7BC6B1585FBB110AB635]]></sign>"
+                + "<result_code><![CDATA[SUCCESS]]></result_code>"
+                + "<openid><![CDATA[oUpF8uN95-Ptaags6E_roPHg7AG0]]></openid>"
+                + "<trade_type><![CDATA[MICROPAY]]></trade_type>"
+                + "<prepay_id><![CDATA[wx201411101639507cbf6ffd8b0779950874]]></prepay_id>"
+                + "</xml>";
+
+        try {
+            UnifiedOrderResponseEntity resp = XMLSerializer.deserialize(msg, UnifiedOrderResponseEntity.class);
+            TestCase.assertEquals("BDF0099C15FF7BC6B1585FBB110AB635", resp.getSign());
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+        
     }
 }
 
