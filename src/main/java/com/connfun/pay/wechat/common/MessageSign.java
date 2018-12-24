@@ -47,17 +47,5 @@ public class MessageSign {
         int n = b < 0 ? 256 + b : b;
         return HEX_DIGIT[n / 16] + HEX_DIGIT[n % 16];
     }
-
-    private static byte[] hexStringToBytes(String str) {
-        byte[] ret = new byte[str.length() / 2];
-        for (int i = 0; i < str.length(); i += 2) {
-            ret[i / 2] = (byte) str.charAt(i);
-            ret[i / 2] <<= 4;
-            ret[i / 2] |= (byte) str.charAt(i + 1);
-        }
-
-        return ret;
-    }
-
 }
 

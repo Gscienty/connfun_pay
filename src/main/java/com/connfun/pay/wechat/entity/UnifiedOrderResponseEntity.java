@@ -1,6 +1,6 @@
 package com.connfun.pay.wechat.entity;
 
-import com.connfun.pay.wechat.common.EntityName;
+import com.connfun.pay.common.EntityName;
 
 public class UnifiedOrderResponseEntity extends BaseResponseEntity {
     private String tradeType;

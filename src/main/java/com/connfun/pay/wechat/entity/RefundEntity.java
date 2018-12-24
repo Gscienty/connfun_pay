@@ -1,8 +1,8 @@
 package com.connfun.pay.wechat.entity;
 
 import com.connfun.pay.wechat.common.Configure;
-import com.connfun.pay.wechat.common.EntityName;
-import com.connfun.pay.wechat.common.RequireField;
+import com.connfun.pay.common.EntityName;
+import com.connfun.pay.common.RequireField;
 
 public class RefundEntity extends BaseEntity {
 

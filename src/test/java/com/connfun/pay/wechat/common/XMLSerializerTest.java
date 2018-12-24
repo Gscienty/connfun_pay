@@ -2,6 +2,7 @@ package com.connfun.pay.wechat.common;
 
 import junit.framework.TestCase;
 
+import com.connfun.pay.common.EntityName;
 import com.connfun.pay.wechat.entity.BaseEntity;
 import com.connfun.pay.wechat.entity.UnifiedOrderResponseEntity;
 

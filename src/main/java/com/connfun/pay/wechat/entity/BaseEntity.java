@@ -4,9 +4,9 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 import com.connfun.pay.wechat.common.Configure;
-import com.connfun.pay.wechat.common.EntityName;
+import com.connfun.pay.common.EntityName;
 import com.connfun.pay.wechat.common.RandGenerator;
-import com.connfun.pay.wechat.common.RequireField;
+import com.connfun.pay.common.RequireField;
 import com.connfun.pay.wechat.common.SignType;
 
 public abstract class BaseEntity {

@@ -9,6 +9,8 @@ import java.security.NoSuchAlgorithmException;
 import java.util.Map;
 import java.util.TreeMap;
 
+import com.connfun.pay.common.EntityName;
+
 import com.connfun.pay.wechat.entity.BaseEntity;
 
 public class Sign {

@@ -16,7 +16,7 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 
-import com.connfun.pay.wechat.common.EntityName;
+import com.connfun.pay.common.EntityName;
 import com.connfun.pay.wechat.entity.BaseEntity;
 import com.connfun.pay.wechat.entity.BaseResponseEntity;
 
