@@ -17,10 +17,10 @@ public abstract class BaseEntity {
     private String nonceStr;
 
     public BaseEntity() {
-        this.appId = Configure.APP_ID;
-        this.mchId = Configure.MCH_ID;
-        this.signType = Configure.SIGN_TYPE;
-        this.nonceStr = RandGenerator.get(32);
+        appId = Configure.getInstance().getAppId();
+        mchId = Configure.getInstance().getMchId();
+        signType = Configure.getInstance().getSignType();
+        nonceStr = RandGenerator.get(32);
     }
 
     public abstract String getWebAPI();

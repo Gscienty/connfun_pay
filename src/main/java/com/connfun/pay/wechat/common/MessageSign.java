@@ -23,7 +23,8 @@ public class MessageSign {
         }
         else if (signType.equals(SignType.HMACSHA256)) {
             Mac mac = Mac.getInstance("HmacSHA256");
-            SecretKeySpec sks  = new SecretKeySpec(Configure.KEY.getBytes("utf-8"), "HmacSHA256");
+            SecretKeySpec sks  = new SecretKeySpec(
+                    Configure.getInstance().getKey().getBytes("utf-8"), "HmacSHA256");
 
             mac.init(sks);
 

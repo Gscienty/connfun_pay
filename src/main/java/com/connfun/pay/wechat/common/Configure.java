@@ -1,16 +1,14 @@
 package com.connfun.pay.wechat.common;
 
 public class Configure {
-    public static String KEY                       = "";
-    public static String APP_ID                    = "";
-    public static String MCH_ID                    = "";
-    public static String SUB_MCH_ID                = "";
-    public static String CERT_PATH                 = "";
-    public static String CERT_PASSWD               = "";
-
-    public static String QRCODE_API                = "weixin://wxpay/qrcode_url";
-    public static String DEVICE_INFO               = "WEB";
-    public static String NOTIFY_URL                = "http://localhost";
+    
+    private String key;
+    private String appId;
+    private String mchId;
+    private SignType signType;
+    private String qrcodeApi;
+    private String deviceInfo;
+    private String notifyUrl;
 
     public static String MICRO_PAY_WEBAPI          = "https://api.mch.qq.com/pay/micropay";
     public static String PAY_WEBAPI                = "https://api.mch.weixin.qq.com/pay/micropay";
@@ -22,7 +20,47 @@ public class Configure {
     public static String REPORT_WEBAPI             = "https://api.mch.weixin.qq.com/payitil/report";
     public static String UNIFIFED_ORDER_WEBAPI     = "https://api.mch.weixin.qq.com/pay/unifiedorder";
     public static String DOWNLOAD_FUND_FLOW_WEBAPI = "https://api.mch.weixin.qq.com/pay/downloadfundflow";
+    public static String SEND_RED_PACK_WEBAPI      = "https://api.mch.weixin.qq.com/mmpaymkttransfers/sendredpack";
 
-    public static SignType SIGN_TYPE             = SignType.MD5;
+
+    private Configure() {
+
+    }
+
+    public static Configure getInstance() {
+        return ConfigureHolder.INSTANCE;
+    }
+
+    private static class ConfigureHolder {
+        private static final Configure INSTANCE = new Configure();
+    }
+
+    public String getKey() {
+        return key;
+    }
+
+    public String getAppId() {
+        return appId;
+    }
+
+    public String getMchId() {
+        return mchId;
+    }
+
+    public SignType getSignType() {
+        return signType;
+    }
+
+    public String getQrcodeApi() {
+        return qrcodeApi;
+    }
+
+    public String getDeviceInfo() {
+        return deviceInfo;
+    }
+
+    public String getNotifyUrl() {
+        return notifyUrl;
+    }
 }
 

@@ -71,7 +71,7 @@ public class Sign {
             signType = SignType.MD5;
         }
 
-        String stringA = Sign.getStringA(obj) + "&key=" + Configure.KEY;
+        String stringA = Sign.getStringA(obj) + "&key=" + Configure.getInstance().getKey();
         if (!signType.getSupport()) {
             throw new UnsupportedOperationException();
         }
@@ -81,7 +81,7 @@ public class Sign {
 
     public static boolean verify(final BaseEntity obj) 
             throws IllegalAccessException, InvocationTargetException, UnsupportedOperationException, NoSuchAlgorithmException, InvalidKeyException, UnsupportedEncodingException {
-        String stringA = Sign.getStringA(obj) + "&key=" + Configure.KEY;
+        String stringA = Sign.getStringA(obj) + "&key=" + Configure.getInstance().getKey();
         String localSign = MessageSign.sign(stringA, obj.getSignType());
         return obj.getSign().equals(localSign);
     }
