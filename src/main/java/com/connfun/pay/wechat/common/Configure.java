@@ -9,6 +9,8 @@ public class Configure {
     private String qrcodeApi;
     private String deviceInfo;
     private String notifyUrl;
+    private String certPath;
+    private String certPasswd;
 
     public static String MICRO_PAY_WEBAPI          = "https://api.mch.qq.com/pay/micropay";
     public static String PAY_WEBAPI                = "https://api.mch.weixin.qq.com/pay/micropay";
@@ -61,6 +63,14 @@ public class Configure {
 
     public String getNotifyUrl() {
         return notifyUrl;
+    }
+
+    public String getCertPath() {
+        return certPath;
+    }
+
+    public String getCertPasswd() {
+        return certPasswd;
     }
 }
 
