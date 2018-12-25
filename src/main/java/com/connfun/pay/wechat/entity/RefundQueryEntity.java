@@ -19,6 +19,10 @@ public class RefundQueryEntity extends BaseEntity {
         return Configure.PAY_REFUND_QUERY_WEBAPI;
     }
 
+    public Boolean security() {
+        return false;
+    }
+
     @Override
     public boolean legal() {
 

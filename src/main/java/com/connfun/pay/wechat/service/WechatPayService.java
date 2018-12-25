@@ -26,7 +26,7 @@ public class WechatPayService {
         }
 
         String xmlContent = XMLSerializer.serialize(entity);
-        return serviceRequest.sendPost(entity.getWebAPI(), xmlContent);
+        return serviceRequest.sendPost(entity.getWebAPI(), entity.security(), xmlContent);
     }
 
     public <T extends BaseResponseEntity> T recv(String msg, Class<T> clazz)

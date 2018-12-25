@@ -17,6 +17,10 @@ public class OrderQueryEntity extends BaseEntity {
         return Configure.PAY_QUERY_WEBAPI;
     }
 
+    public Boolean security() {
+        return false;
+    }
+
     @Override
     public boolean legal() {
         if (this.transactionId == null && this.outTradeNo == null) {

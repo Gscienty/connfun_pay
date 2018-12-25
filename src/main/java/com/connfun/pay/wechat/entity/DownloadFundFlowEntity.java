@@ -19,6 +19,10 @@ public class DownloadFundFlowEntity extends BaseEntity {
         return Configure.DOWNLOAD_FUND_FLOW_WEBAPI;
     }
 
+    public Boolean security() {
+        return true;
+    }
+
     @RequireField
     @EntityName(value = "bill_date")
     public String getBillDate() {

@@ -14,6 +14,10 @@ public class DownloadBillEntity extends BaseEntity {
         super();
     }
 
+    public Boolean security() {
+        return false;
+    }
+
     public String getWebAPI() {
         return Configure.DOWNLOAD_BILL_WEBAPI;
     }

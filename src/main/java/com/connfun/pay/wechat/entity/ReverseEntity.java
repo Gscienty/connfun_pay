@@ -15,6 +15,10 @@ public class ReverseEntity extends BaseEntity {
         return Configure.REVERSE_WEBAPI;
     }
 
+    public Boolean security() {
+        return true;
+    }
+
     @Override
     public boolean legal() {
         if (this.transactionId == null && this.outTradeNo == null) {

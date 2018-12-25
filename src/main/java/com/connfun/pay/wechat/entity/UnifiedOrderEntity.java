@@ -34,6 +34,10 @@ public class UnifiedOrderEntity extends BaseEntity {
         return Configure.UNIFIFED_ORDER_WEBAPI;
     }
 
+    public Boolean security() {
+        return false;
+    }
+
     @Override
     public boolean legal() {
 

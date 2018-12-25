@@ -30,6 +30,10 @@ public class MicroPayEntity extends BaseEntity {
         return Configure.MICRO_PAY_WEBAPI;
     }
 
+    public Boolean security() {
+        return false;
+    }
+
     @EntityName(value = "device_info")
     public String getDeviceInfo() {
         return deviceInfo;

@@ -24,6 +24,10 @@ public class RefundEntity extends BaseEntity {
         return Configure.PAY_REFUND_WEBAPI;
     }
 
+    public Boolean security() {
+        return true;
+    }
+
     @Override
     public boolean legal() {
         if (this.transactionId == null && this.outTradeNo == null) {

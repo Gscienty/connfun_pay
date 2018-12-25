@@ -30,6 +30,10 @@ public class SendRedPackEntity extends BaseEntity {
         return Configure.SEND_RED_PACK_WEBAPI;
     }
 
+    public Boolean security() {
+        return true;
+    }
+
     @Override
     public boolean legal() {
         if (getNonceStr() == null) return false;

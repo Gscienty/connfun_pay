@@ -24,6 +24,8 @@ public abstract class BaseEntity {
     }
 
     public abstract String getWebAPI();
+    public abstract Boolean security();
+
 
     public boolean legal() {
         Method[] getMethods = this.getClass().getMethods();
