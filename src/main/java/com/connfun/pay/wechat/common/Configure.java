@@ -72,5 +72,41 @@ public class Configure {
     public String getCertPasswd() {
         return certPasswd;
     }
+
+    public void setKey(String key) {
+        this.key = key;
+    }
+
+    public void setAppId(String appId) {
+        this.appId = appId;
+    }
+
+    public void setMchId(String mchId) {
+        this.mchId = mchId;
+    }
+
+    public void setSignType(SignType signType) {
+        this.signType = signType;
+    }
+
+    public void setQrcodeApi(String qrcodeApi) {
+        this.qrcodeApi = qrcodeApi;
+    }
+
+    public void setDeviceInfo(String deviceInfo) {
+        this.deviceInfo = deviceInfo;
+    }
+
+    public void setNotifyUrl(String notifyUrl) {
+        this.notifyUrl = notifyUrl;
+    }
+
+    public void setCertPath(String certPath) {
+        this.certPath = certPath;
+    }
+
+    public void setCertPasswd(String certPasswd) {
+        this.certPasswd = certPasswd;
+    }
 }
 

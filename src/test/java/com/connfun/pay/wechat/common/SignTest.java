@@ -20,6 +20,10 @@ public class SignTest extends TestCase {
             return "";
         }
 
+        public Boolean security() {
+            return false;
+        }
+
         @EntityName(value = "body")
         public String getBody() {
             return body;
@@ -32,10 +36,10 @@ public class SignTest extends TestCase {
     }
 
     public void testMD5Sign() {
-        Configure.APP_ID = "wxd930ea5d5a258f4f";
-        Configure.KEY = "192006250b4c09247ec02edce69f6a2d";
-        Configure.MCH_ID = "10000100";
-        Configure.SIGN_TYPE = SignType.MD5;
+        Configure.getInstance().setAppId("wxd930ea5d5a258f4f");
+        Configure.getInstance().setKey("192006250b4c09247ec02edce69f6a2d");
+        Configure.getInstance().setMchId("10000100");
+        Configure.getInstance().setSignType(SignType.MD5);
 
         SignTestEntity entity = new SignTestEntity();
         entity.setNonceStr("ibuaiVcKdpRxkhJA");
@@ -52,10 +56,10 @@ public class SignTest extends TestCase {
     }
 
     public void testHMACSHA256Sign() {
-        Configure.APP_ID = "wxd930ea5d5a258f4f";
-        Configure.KEY = "192006250b4c09247ec02edce69f6a2d";
-        Configure.MCH_ID = "10000100";
-        Configure.SIGN_TYPE = SignType.HMACSHA256;
+        Configure.getInstance().setAppId("wxd930ea5d5a258f4f");
+        Configure.getInstance().setKey("192006250b4c09247ec02edce69f6a2d");
+        Configure.getInstance().setMchId("10000100");
+        Configure.getInstance().setSignType(SignType.MD5);
 
         SignTestEntity entity = new SignTestEntity();
         entity.setNonceStr("ibuaiVcKdpRxkhJA");
